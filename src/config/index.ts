@@ -31,4 +31,6 @@ export const config = {
   jwt_refresh_expires_in: getEnv("JWT_REFRESH_EXPIRES_IN", false, "7d"),
   bcrypt_salt_rounds: getEnv("SALT_ROUNDS", false, "10"),
   cookie_domain: getEnv("COOKIE_DOMAIN", false, "localhost"),
+  invite_expires: getEnv("INVITE_EXPIRES", false, "1d"),
+  invite_secret: getEnv("INVITE_SECRET"),
 };

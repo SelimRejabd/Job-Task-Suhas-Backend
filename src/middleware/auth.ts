@@ -11,6 +11,7 @@ import { config } from "../config";
 const auth = (...requiredRoles: TUserRole[]) => {
   return catchAsync(async (req: Request, res: Response, next: NextFunction) => {
     const token = req.cookies.accessToken || req.headers.authorization;
+
     if (!token) {
       throw new AppError("You are not authorized", 401);
     }
