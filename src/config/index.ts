@@ -33,4 +33,6 @@ export const config = {
   cookie_domain: getEnv("COOKIE_DOMAIN", false, "localhost"),
   invite_expires: getEnv("INVITE_EXPIRES", false, "1d"),
   invite_secret: getEnv("INVITE_SECRET"),
+  admin_email: getEnv("ADMIN_EMAIL"),
+  admin_password: getEnv("ADMIN_PASSWORD"),
 };
