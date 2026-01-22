@@ -18,11 +18,17 @@ export const config = {
   local_frontend_url: getEnv(
     "LOCAL_FRONTEND_URL",
     false,
-    "http://localhost:3000"
+    "http://localhost:3000",
   ),
   prod_frontend_url: getEnv(
     "PROD_FRONTEND_URL",
     false,
-    "https://your-production-domain.com"
+    "https://your-production-domain.com",
   ),
+  jwt_access_secret_key: getEnv("JWT_ACCESS_SECRET"),
+  jwt_access_expires_in: getEnv("JWT_EXPIRES_IN", false, "1d"),
+  jwt_refresh_secret_key: getEnv("JWT_REFRESH_SECRET"),
+  jwt_refresh_expires_in: getEnv("JWT_REFRESH_EXPIRES_IN", false, "7d"),
+  bcrypt_salt_rounds: getEnv("SALT_ROUNDS", false, "10"),
+  cookie_domain: getEnv("COOKIE_DOMAIN", false, "localhost"),
 };
