@@ -4,6 +4,7 @@ import helmet from "helmet";
 import compression from "compression";
 import { connectDB } from "./config/db";
 import { httpLogger } from "./utils/logger";
+import cookieParser from "cookie-parser";
 
 import notFound from "./middleware/notFound";
 import globalErrorHandler from "./middleware/globalErrorHandler";
@@ -15,6 +16,8 @@ export const createApp = async (): Promise<Application> => {
   await connectDB();
 
   const app = express();
+
+  app.use(cookieParser());
 
   // CORS configuration
   const allowedOrigins = [config.local_frontend_url, config.prod_frontend_url];

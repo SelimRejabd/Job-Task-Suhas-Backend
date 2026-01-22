@@ -18,7 +18,9 @@ type TResponse<T> = {
 const apiResponse = <T>(res: Response, data: TResponse<T>) => {
   const response: Partial<TResponse<T>> = {
     success: data.success,
+    statusCode: data?.statusCode,
     message: data.message,
+
     data: data.data,
   };
 

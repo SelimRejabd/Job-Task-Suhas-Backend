@@ -26,7 +26,7 @@ const login = async (payload: ILoginPayLoad) => {
   if (!data) {
     throw new AppError("Invalid email or password", 401);
   }
-  if (data.status === USER_STATUS.inactive) {
+  if (data.status !== USER_STATUS.active) {
     throw new AppError("User is inactive", 403);
   }
   const decodedPassword = await bcrypt.compare(payload.password, data.password);
