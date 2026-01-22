@@ -126,48 +126,6 @@ yarn dev
 
 ---
 
-## ❤️ Health Check
-
-Once the server is running, verify it using:
-
-```http
-GET /health
-```
-
-Expected response:
-
-```json
-{ "status": "OK" }
-```
-
----
-
-## 📁 Project Structure (Simplified)
-
-```text
-src/
-├── app.ts
-├── server.ts
-├── config/
-├── models/
-├── routes/
-├── controllers/
-├── middleware/
-├── scripts/
-│   └── createAdmin.ts
-└── utils/
-```
-
----
-
-## 🔒 Security Notes
-
-* Always change default admin credentials in production
-* Use a secrets manager for environment variables
-* Enable HTTPS in production
-
----
-
 ## 🧑‍💻 Author
 
 Developed by **Salim Reja**
